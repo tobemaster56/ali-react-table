@@ -8,6 +8,10 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ThemedBaseTable } from './themed-table'
 
+import {tableData, originData} from '../src/utils/data'
+
+console.log(tableData)
+
 export default { title: 'BaseTable 示例' }
 
 export function 基本用法() {
@@ -190,7 +194,8 @@ export function 列分组() {
         {
           name: '基本信息',
           lock: true,
-          children: [cols.provinceName, cols.updateTime],
+          code: 'provinceName',
+          // children: [cols.provinceName, cols.updateTime],
         },
         {
           name: '指标分组',
